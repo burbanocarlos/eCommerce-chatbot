@@ -1,0 +1,11 @@
+intent:order_product
+- I'd like to order [2](quantity) [gdp](product_name)s
+- I want to buy [3](quantity) [amnesia haze](product_name)s
+- can I place an order for [1](quantity) [indica gummies](product_name)s?
+- I'm interested in buying [4](quantity) [gdp](product_name)s
+- I'd like to purchase [5](quantity) [amnesia haze](product_name)s
+
+intent:product_info
+- I'm interested in [gdp](product_name), can you give me more information?
+- could you please provide some details about [amnesia haze](product_name)?
+- I want to learn more about [indica gummies](product_name), can you help me?

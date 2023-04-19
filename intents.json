@@ -1,85 +1,145 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
-         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
-         "context_set": ""
+         "patterns": [  "Hi", 
+                        "How are you",
+                        "Hello",
+                        "Good day", 
+                        "Whats up"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"]
+         
         },
         {"tag": "goodbye",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-         "responses": ["Sad to see you go :(", "Talk to you later aligater", "Goodbye!"],
-         "context_set": ""
+         "patterns": [  "bye", 
+                        "See you later",
+                        "Goodbye",
+                        "I am Leaving", 
+                        "Have a Good day"
+                                               ],
+         "responses": ["Sad to see you go :(", "Talk to you later aligater", "Goodbye!"]
+         
         },
-        {"tag": "products_list",
-         "patterns": ["List products", "What products do you have?", "What can I buy?", "What are you selling?", "What do you offer?", "Can you list the products ?"],
-         "responses": ["Currently, we have the following products available:"],
-         "context_set": ""
+        {
+        "tag": "products_list",
+        "patterns": [  "list products",
+                        "What products do you have?",
+                        "What can I buy?",
+                        "What are you selling?",
+                        "Can you list the products?",
+                        "Show me your products",
+                        "What items do you offer?",
+                        "What's on your product list?",
+                        "What kind of products do you sell?",
+                        "What's available for purchase?",
+                        "I'm interested in buying something",
+                        "Can you recommend some products?",
+                        "Can you tell me about your products?",
+                        "What's in your inventory?",
+                        "What do you have in stock?",
+                        "What's for sale?",
+                        "Can you show me your product catalog?",
+                        "What's on the menu?",
+                        "What are your top-selling products?",
+                        "What are your most popular items?"
+                                                        ],
+         "responses": ["Currently, we have the following products available:"]
+        
         },
+
+
         {"tag": "hours_delivery",
          "patterns":
                  [
-                        "deliver hours", 
-                        "When can you delivery today ?", 
-                        "What hours are available for delivery today ?"
+                "deliver hours", 
+                "when can you delivery today ?", 
+                "what hours are available for delivery today ?",
+                "what are you delivery hours?"
                 ],
-         "responses": ["We are open to deliver today from 7am-4pm"],
-         "context_set": ""
+         "responses": ["We are open to deliver today from 7am-4pm"]
+         
         },
-        {"tag": "product_info",
-         "patterns": [   "I'm interested in {product_name}, can you give me more information?",
-                        "Could you please provide some details about {product_name}?",
-                        "I want to learn more about {product_name}, can you help me?",
-                        "I'm considering purchasing {product_name}, what can you tell me about it?",                      
-                        "Please provide me with some details about {product_name}.",
-                        "tell me about {product_name}"
-
-                        ],
-         "responses": ["Sure! Here is the information for {product_name}: {product_info}"],
-         "context_set": ""
+        { "tag": "product_info",
+        "patterns": [
+            "more about {product_name}",
+            "description of {product_name}",
+            "describe {product_name}",
+            "why should I buy {product_name}?",
+            "tell me about {product_name}",
+            "what can you tell me about {product_name}?",
+            "give me details about {product_name}",
+            "can you provide more information about {product_name}?",
+            "what is {product_name}?",
+            "what makes {product_name} unique?",
+            "what are the benefits of {product_name}?",
+            "how does {product_name} work?",
+            "what features does {product_name} have?",
+            "what are the specifications of {product_name}?",
+            "what are the dimensions of {product_name}?",
+            "what are the materials used to make {product_name}?",
+            "what is the price of {product_name}?",
+            "is {product_name} in stock?",
+            "can I see a picture of {product_name}?",
+            "can I see {product_name} before I buy it?"
+        ],
+        "responses": [
+            "Sure! Here is the information for {product_name}: {product_info}"
+        ]
+         
         },
 
        {"tag": "unknown",
         "patterns": [""],
         "responses": [
                 "I'm sorry, I didn't understand. Please try again.",
-                "I'm not sure what you mean. Can you please rephrase that?",
                 "I don't have an answer for that. Can you please ask something else?",
                 "I'm still learning, can you please try asking something else?",
                 "I'm afraid I didn't catch that. Can you please ask again?",
                 "I'm not programmed to understand that. Can you please try asking a different question?"
-                 ],
-        "context_set": ""
+                 ]
+        
         },
         {
          "tag": "order_status",
-         "patterns": ["What is the status of my order?", "Can you tell me about my order status?", "Check my order status", "What's the status of my purchase?"],
-         "responses": ["Sure, please provide your order number."],
-         "context_set": ""
+         "patterns": [  "What is the status of my order?",
+                        "Can you tell me about my order status?", 
+                        "Check my order status",
+                        "What's the status of my purchase?"],
+         "responses": ["Sure, please provide your order number."]
+         
         },
             
         {
-        "tag": "order_product",
-        "patterns": [
-                    "I'd like to order {quantity} {product_name}s",
-                    "can I place an order for {quantity} {product_name}s?",
-                    "I want to buy {quantity} {product_name}s",
-                    "i want to order {quantity} {product_name}s ",
-                    "How do I order {quantity} {product_name}s?",
-                    "What's the process for ordering {quantity} {product_name}s?",
-                    "Can you help me place an order for {quantity} {product_name}s?",
-                    "I'm interested in buying {quantity} {product_name}s",
-                    "I'd like to purchase {quantity} {product_name}s",
-                    "Can you assist me in ordering {quantity} {product_name}s?"
-                    
-                    
-                ],
-                "responses": [
-                    "Great, we have received your order for {quantity} {product_name}s. Your order number is {order_number}.",
-                    "Thank you for your order for {quantity} {product_name}s. Your order number is {order_number}.",
-                    "Your order for {quantity} {product_name}s has been placed. Your order number is {order_number}.",
-                    "We have processed your order for {quantity} {product_name}s. Your order number is {order_number}.",
-                    "Your order for {quantity} {product_name}s is confirmed. Your order number is {order_number}."
-                ],
-        "context_set": "product"
+        
+    "tag": "order_product",
+    "patterns": [
+        "I want to buy {quantity} {product_name}s",
+        "I want {quantity} {product_name}s",
+        "I'd like to order {quantity} {product_name}s",
+        "Can I place an order for {quantity} {product_name}s?",
+        "I want to order {quantity} {product_name}s",
+        "Can I buy {quantity} {product_name}s?",
+        "I'd like to buy {quantity} {product_name}s",
+        "How do I buy {quantity} {product_name}s?",
+        "What's the process for buying {quantity} {product_name}s?",
+        "How can I purchase {quantity} {product_name}s?",
+        "Please order {quantity} {product_name}s for me",
+        "I'd like to purchase {quantity} {product_name}s",
+        "Could you place an order for {quantity} {product_name}s for me?",
+        "What's the cost for {quantity} {product_name}s?",
+        "How much does it cost for {quantity} {product_name}s?",
+        "What's the price for {quantity} {product_name}s?",
+        "I'm interested in buying {quantity} {product_name}s",
+        "I'd like to place an order for {quantity} {product_name}s",
+        "I'd like to know how to order {quantity} {product_name}s",
+        "How many {product_name}s can I buy for {quantity} dollars?"
+    ],
+    "responses": [
+        "Great, we have received your order for {quantity} {product_name}s. Your order number is {order_number}.",
+        "Thank you for your order for {quantity} {product_name}s. Your order number is {order_number}.",
+        "Your order for {quantity} {product_name}s has been placed. Your order number is {order_number}.",
+        "We have processed your order for {quantity} {product_name}s. Your order number is {order_number}.",
+        "Your order for {quantity} {product_name}s is confirmed. Your order number is {order_number}."
+    ]
+        
             }
             
 
