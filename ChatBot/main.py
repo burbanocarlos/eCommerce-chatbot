@@ -98,23 +98,23 @@ def bag_of_words(s, words):
     return numpy.array(bag)
 
 
-products = ["Grand Daddy Purple(Flower)", "Amnesia Haze(Flower)", "Indica Gummies (Edibles)"]
+products = ["Purple(Flower)", "Amnesia(Flower)", "Gummies (Edibles)"]
 dict_products = {"GDP" : 1234,
-                 "amnesia haze" : 3456,
-                 "indica gummies" : 7897
+                 "amnesia" : 3456,
+                 "indica" : 7897
                 }
-products_lower = ["gdp", "amnesia haze", "indica gummies"]
+products_lower = ["gdp", "amnesia haze", "gummies"]
 product = [   
      {     
         "name": "gdp",   
         "price": 10.99,      
         "description": "This is a description for Product A."    }, 
      {      
-        "name": "amnesia haze",   
+        "name": "amnesia",   
         "price": 19.99,     
         "description": "This is a description for Product B."   },   
      {      
-        "name": "indica gummies",        
+        "name": "gummies",        
         "price": 7.99,        
         "description": "This is a description for Product C."   
      }]
